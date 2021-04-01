@@ -1,0 +1,8 @@
+# this assumes that you installed portfucker in /opt/portfucker like me
+[portfucker]
+enabled  = true
+filter   = portfucker
+logpath  = /opt/portfucker/portscan.log
+action_abuseipdb = abuseipdb
+action = %(action_)s
+         %(action_abuseipdb)s[abuseipdb_apikey="", abuseipdb_category="14"]
