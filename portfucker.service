@@ -1,0 +1,14 @@
+[Unit]
+Description=portfucker
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+# replace /opt/portfucker with your install path
+WorkingDirectory=/opt/portfucker
+ExecStart=/usr/bin/env python3 /opt/portfucker/portfucker.py
+
+[Install]
+WantedBy=multi-user.target
